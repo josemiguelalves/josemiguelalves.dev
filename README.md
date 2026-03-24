@@ -1,6 +1,6 @@
 # josemiguelalves.dev
 
-Static site for [AWS CLI Configure](https://github.com/josemiguelalves/aws-cli-configure-ext), published via GitHub Pages. The install section links to the [Open VSX listing](https://open-vsx.org/extension/josemiguelalves/aws-cli-configure-ext) for Cursor and other Open VSX&ndash;based editors.
+Personal developer site published via GitHub Pages: profile, **Open source** projects, and links to install [AWS CLI Configure](https://github.com/josemiguelalves/aws-cli-configure-ext) from [Open VSX](https://open-vsx.org/extension/josemiguelalves/aws-cli-configure-ext) (Cursor, VSCodium, etc.).
 
 ## Create the GitHub repository (first time)
 

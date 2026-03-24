@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AWS CLI Configure — VS Code / Cursor extension</title>
-  <meta name="description" content="Open AWS CLI credentials and config from your editor and set any named profile as [default]. Install from Open VSX for Cursor, VSCodium, and compatible editors." />
+  <title>Jose Miguel Alves — Software developer</title>
+  <meta name="description" content="Software developer. Open source tools, including AWS CLI Configure for VS Code, Cursor, and compatible editors." />
   <style>
     :root {
       color-scheme: light dark;
@@ -37,35 +37,80 @@
       line-height: 1.5;
     }
     main {
-      max-width: 40rem;
+      max-width: 42rem;
       margin: 0 auto;
       padding: 2.5rem 1.25rem 4rem;
     }
-    h1 {
-      font-size: 1.75rem;
+    .profile {
+      margin-bottom: 2.5rem;
+    }
+    .profile h1 {
+      font-size: 1.85rem;
       font-weight: 700;
-      margin: 0 0 0.75rem;
+      margin: 0 0 0.35rem;
       letter-spacing: -0.02em;
     }
-    .lead {
+    .profile .role {
+      font-size: 1rem;
       color: var(--muted);
+      margin: 0 0 1rem;
+      font-weight: 500;
+    }
+    .profile .bio {
+      color: var(--fg);
       font-size: 1.05rem;
-      margin: 0 0 1.75rem;
+      margin: 0 0 1.25rem;
+      max-width: 38rem;
+    }
+    .social {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.25rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .social a {
+      color: var(--accent);
+      font-weight: 500;
+      text-decoration: none;
+    }
+    .social a:hover, .social a:focus-visible {
+      text-decoration: underline;
+      outline: none;
+    }
+    .section-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin: 0 0 1rem;
+      font-weight: 600;
     }
     .card {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 1.5rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
     }
-    .install h2 {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
+    .card:last-of-type { margin-bottom: 0; }
+    .project-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin: 0 0 0.5rem;
+      letter-spacing: -0.02em;
+    }
+    .project-desc {
       color: var(--muted);
-      margin: 0 0 0.75rem;
-      font-weight: 600;
+      font-size: 0.98rem;
+      margin: 0 0 1.25rem;
+    }
+    .project-desc code {
+      font-size: 0.9em;
+      padding: 0.1em 0.35em;
+      border-radius: 4px;
+      background: color-mix(in srgb, var(--border) 40%, transparent);
     }
     .cta {
       display: inline-block;
@@ -75,28 +120,30 @@
       font-weight: 600;
       padding: 0.65rem 1.25rem;
       border-radius: 999px;
-      margin-bottom: 0.75rem;
+      margin-bottom: 1rem;
     }
     .cta:hover, .cta:focus-visible {
       background: var(--accent-hover);
       outline: 2px solid var(--accent);
       outline-offset: 2px;
     }
-    .hint {
-      font-size: 0.9rem;
-      color: var(--muted);
-      margin: 0;
-    }
-    .links {
+    .project-links {
       margin: 0;
       padding: 0;
       list-style: none;
     }
-    .links li { margin-bottom: 0.5rem; }
-    .links a { color: var(--accent); }
-    .links a:hover { text-decoration: underline; }
+    .project-links li { margin-bottom: 0.45rem; }
+    .project-links a { color: var(--accent); }
+    .project-links a:hover { text-decoration: underline; }
+    .hint {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin: 0.75rem 0 0;
+    }
     footer {
-      margin-top: 2rem;
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
       font-size: 0.85rem;
       color: var(--muted);
     }
@@ -104,35 +151,47 @@
 </head>
 <body>
   <main>
-    <h1>AWS CLI Configure</h1>
-    <p class="lead">
-      A VS Code&ndash;compatible extension to open your AWS CLI <code>credentials</code> and <code>config</code> files,
-      switch the active profile from the status bar, and set any named profile as <code>[default]</code> &mdash; no terminal required.
-    </p>
-
-    <section class="card install" aria-labelledby="install-heading">
-      <h2 id="install-heading">Install</h2>
-      <p>
-        <a class="cta" href="https://open-vsx.org/extension/josemiguelalves/aws-cli-configure-ext">
-          Install on Open VSX (Cursor, VSCodium, &amp; compatible editors)
-        </a>
+    <header class="profile">
+      <h1>Jose Miguel Alves</h1>
+      <p class="role">Software developer</p>
+      <p class="bio">
+        I build tools and integrations for developers. This site lists open source projects I maintain;
+        you can find more on GitHub.
       </p>
-      <p class="hint">
-        Open your editor&rsquo;s Extensions panel, search for <strong>AWS CLI Configure</strong>, or use the link above for the official listing.
-      </p>
-    </section>
-
-    <section class="card" aria-labelledby="links-heading">
-      <h2 id="links-heading" style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin:0 0 0.75rem;font-weight:600;">Links</h2>
-      <ul class="links">
-        <li><a href="https://github.com/josemiguelalves/aws-cli-configure-ext">Source code on GitHub</a></li>
-        <li><a href="https://github.com/josemiguelalves/aws-cli-configure-ext/issues">Report an issue</a></li>
-        <li><a href="https://github.com/josemiguelalves/aws-cli-configure-ext/releases">Download .vsix (manual install)</a></li>
+      <ul class="social">
+        <li><a href="https://github.com/josemiguelalves" rel="me">GitHub</a></li>
       </ul>
+    </header>
+
+    <section aria-labelledby="oss-heading">
+      <h2 id="oss-heading" class="section-title">Open source</h2>
+
+      <article class="card">
+        <h3 class="project-title">AWS CLI Configure</h3>
+        <p class="project-desc">
+          A VS Code&ndash;compatible extension for <strong>Cursor</strong>, <strong>VSCodium</strong>, and other Open VSX&ndash;based editors.
+          Open your AWS CLI <code>credentials</code> and <code>config</code> files, switch the active profile from the status bar,
+          and set any named profile as <code>[default]</code> &mdash; without using the terminal.
+        </p>
+        <p>
+          <a class="cta" href="https://open-vsx.org/extension/josemiguelalves/aws-cli-configure-ext">
+            Install on Open VSX
+          </a>
+        </p>
+        <p class="hint">
+          In your editor: Extensions panel &rarr; search <strong>AWS CLI Configure</strong>, or use the link above.
+        </p>
+        <ul class="project-links" aria-label="AWS CLI Configure links">
+          <li><a href="https://github.com/josemiguelalves/aws-cli-configure-ext">Source code</a></li>
+          <li><a href="https://github.com/josemiguelalves/aws-cli-configure-ext/issues">Issues</a></li>
+          <li><a href="https://github.com/josemiguelalves/aws-cli-configure-ext/releases">Releases (.vsix)</a></li>
+        </ul>
+        <p class="hint" style="margin-top:1rem;">MIT License. Not affiliated with Amazon Web Services.</p>
+      </article>
     </section>
 
     <footer>
-      <p>Open source under the MIT License. Not affiliated with Amazon Web Services.</p>
+      <p>&copy; Jose Miguel Alves</p>
     </footer>
   </main>
 </body>
